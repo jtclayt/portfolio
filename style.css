@@ -15,10 +15,193 @@
 }
 
 /* HTML selector rules */
+article, header {
+  background-color: rgba(194, 204, 201, 0.856);
+}
 
+article {
+  padding: 25px;
+  border: 3px solid rgba(194, 204, 201, 0.856);
+  border-radius: 10px;
+}
+
+article:hover {
+  background-color: rgba(241, 237, 243, 0.945);
+  border: 3px solid rgba(248, 246, 218, 0.856);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+  color: rgba(34, 40, 128, 0.884);
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+header {
+  font-size: 3rem;
+  margin: 0;
+  padding: 20px;
+  background-color: rgba(194, 204, 201, 0.856);
+}
+
+main {
+  background-image: url('./assets/bg-art.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 /* Class rules */
-
+.row, #nav {
+  display: flex;
+  align-items: center;
+}
 
 /* ID rules */
+#nav {
+  background-color: rgba(34, 40, 128, 0.884);
+  list-style: none;
+}
 
+#nav li {
+  color: white;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+#nav li:hover, #nav li.selected {
+  font-size: 2.2rem;
+}
+
+#nav li:hover {
+  color: chocolate;
+}
+
+#nav li.selected {
+  color: bisque;
+}
+
+#portrait {
+  width: 200px;
+  border: 5px solid rgba(194, 204, 201, 0.856);
+}
+
+@media only screen and (max-width: 480px) {
+  /* HTML selector rules */
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  header {
+    padding: 10px;
+  }
+
+  section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Class rules */
+  .row {
+    flex-wrap: wrap;
+  }
+
+  .row > * {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* ID rules */
+  #nav {
+    padding: 20px;
+  }
+
+  #nav li {
+    margin-right: 20px;
+    font-size: 1.3rem;
+  }
+
+  #nav li:hover {
+    font-size: 1.6rem;
+  }
+
+  #nav li.selected {
+    font-size: 1.6rem;
+  }
+
+  #portrait {
+    margin: 20px auto;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 1023px) {
+  /* HTML selector rules */
+
+  /* Class rules */
+  .row {
+    padding: 25px;
+  }
+
+  .row > * {
+    margin-right: 25px;
+  }
+
+  /* ID rules */
+  #nav {
+    padding: 20px;
+  }
+
+  #nav li {
+    margin-right: 50px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  /* HTML selector rules */
+  body {
+    display: flex;
+  }
+
+  main, #nav {
+    height: 100vh;
+  }
+
+  main {
+    width: 80vw;
+  }
+
+  /* Class rules */
+  .row {
+    padding: 25px 5%;
+  }
+
+  .row > * {
+    margin-right: 50px;
+  }
+
+  /* ID rules */
+  #nav {
+    width: 20vw;
+    flex-direction: column;
+  }
+
+  #nav li {
+    padding-top: 50px;
+  }
+
+  #portrait {
+    width: 300px;
+  }
+}
