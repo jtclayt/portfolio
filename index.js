@@ -21,7 +21,6 @@
 
   /** Add event listener to scroll if in desktop mode */
   function checkDesktopMode() {
-    console.log('resize', $(window).innerWidth());
     if ($(window).innerWidth() >= 1024) {
       $(document).on('wheel', scrollPage);
     } else {
@@ -41,7 +40,6 @@
       setTimeout(() => {
         canScroll = true;
       }, 200);
-      console.log(event.originalEvent.deltaY);
       if (event.originalEvent.deltaY > 0) {
         swapPage((currentPage + 1) % PAGES.length);
       } else if (event.originalEvent.deltaY < 0) {

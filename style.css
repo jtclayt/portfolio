@@ -20,12 +20,14 @@ article, header {
 }
 
 article {
+  position: relative;
   padding: 25px;
   border: 3px solid rgba(194, 204, 201, 0.856);
   border-radius: 10px;
 }
 
 article:hover {
+  top: -5px;
   background-color: rgba(241, 237, 243, 0.945);
   border: 3px solid rgba(248, 246, 218, 0.856);
 }
@@ -49,6 +51,17 @@ h2 {
   font-weight: 600;
 }
 
+h3, #nav {
+  background-color: rgba(34, 40, 128, 0.884);
+  color: white;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding: 10px;
+}
+
 header {
   font-size: 3rem;
   margin: 0;
@@ -64,19 +77,57 @@ main {
 }
 
 /* Class rules */
-.row, #nav {
+.card {
+  width: 300px;
+  height: 420px;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(194, 196, 204, 0.856);
+}
+
+.card > img {
+  width: 300px;
+  height: 160px;
+}
+
+.card > p {
+  padding: 10px;
+}
+
+.card > p:nth-child(3) {
+  height: 130px;
+}
+
+.card > p img, .card > p a {
+  vertical-align: middle;
+}
+
+.card > p img {
+  height: 35px;
+  border-radius: 100%;
+}
+
+.card-container, .row, #nav {
   display: flex;
   align-items: center;
 }
 
+.card-container {
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
 /* ID rules */
+#contact > article {
+  width: 60%;
+  margin: 50px auto;
+}
 #nav {
   background-color: rgba(34, 40, 128, 0.884);
   list-style: none;
 }
 
 #nav li {
-  color: white;
   font-size: 1.7rem;
   cursor: pointer;
 }
@@ -98,6 +149,7 @@ main {
   border: 5px solid rgba(194, 204, 201, 0.856);
 }
 
+/* Mobile */
 @media only screen and (max-width: 480px) {
   /* HTML selector rules */
   h1 {
@@ -146,6 +198,7 @@ main {
   }
 }
 
+/* Tablet */
 @media only screen and (min-width: 481px) and (max-width: 1023px) {
   /* HTML selector rules */
 
@@ -168,6 +221,7 @@ main {
   }
 }
 
+/* Large screens */
 @media only screen and (min-width: 1024px) {
   /* HTML selector rules */
   body {
@@ -183,6 +237,10 @@ main {
   }
 
   /* Class rules */
+  .card-container {
+    margin-top: 50px;
+  }
+
   .row {
     padding: 25px 5%;
   }
