@@ -43,7 +43,7 @@
       if (event.originalEvent.deltaY > 0) {
         swapPage((currentPage + 1) % PAGES.length);
       } else if (event.originalEvent.deltaY < 0) {
-        swapPage((currentPage - 1) % PAGES.length);
+        swapPage((currentPage - 1 + PAGES.length) % PAGES.length);
       }
     }
   }

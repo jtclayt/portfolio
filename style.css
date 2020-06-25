@@ -15,21 +15,21 @@
 }
 
 /* HTML selector rules */
-article, header {
+article, header, #contact {
   background-color: rgba(194, 204, 201, 0.856);
 }
 
-article {
+article, #contact {
   position: relative;
   padding: 25px;
   border: 3px solid rgba(194, 204, 201, 0.856);
   border-radius: 10px;
 }
 
-article:hover {
-  top: -5px;
-  background-color: rgba(241, 237, 243, 0.945);
-  border: 3px solid rgba(248, 246, 218, 0.856);
+article:hover, #contact:hover {
+  top: -10px;
+  background-color: rgba(244, 238, 246, 0.924);
+  border: 3px solid rgba(138, 136, 105, 0.897);
 }
 
 body {
@@ -76,13 +76,25 @@ main {
   background-size: cover;
 }
 
+section {
+  padding: 20px;
+}
+
 /* Class rules */
 .card {
+  position: relative;
   width: 300px;
   height: 420px;
+  margin: 20px;
   flex-direction: column;
   text-align: center;
   background-color: rgba(194, 196, 204, 0.856);
+  border: 2px solid rgba(255, 255, 255, 0);
+}
+
+.card:hover {
+  top: -10px;
+  border: 2px solid teal;
 }
 
 .card > img {
@@ -118,10 +130,21 @@ main {
 }
 
 /* ID rules */
-#contact > article {
+#about article > p {
+  margin-top: 10px;
+}
+
+#contact {
   width: 60%;
   margin: 50px auto;
+  text-align: center;
 }
+
+#contact > article > p {
+  margin-top: 10px;
+  font-size: 1.4rem;
+}
+
 #nav {
   background-color: rgba(34, 40, 128, 0.884);
   list-style: none;
@@ -233,7 +256,7 @@ main {
   }
 
   main {
-    width: 80vw;
+    width: 85vw;
   }
 
   /* Class rules */
@@ -251,7 +274,7 @@ main {
 
   /* ID rules */
   #nav {
-    width: 20vw;
+    width: 15vw;
     flex-direction: column;
   }
 
