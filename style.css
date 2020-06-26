@@ -168,6 +168,15 @@ section {
   font-size: 1.4rem;
 }
 
+#contact > p > * {
+  vertical-align: middle;
+}
+
+#contact > p > img {
+  height: 40px;
+  margin-right: 10px;
+}
+
 #nav {
   background-color: rgba(34, 40, 128, 0.884);
   list-style: none;
